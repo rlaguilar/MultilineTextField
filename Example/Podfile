@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MultilineTextField_Example' do
+  pod 'MultilineTextField', :path => '../'
+
+  target 'MultilineTextField_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
