@@ -19,6 +19,17 @@ class ViewController: UIViewController {
 //      imageView.bounds = CGRect(x: 0, y: 0, width: 50, height: 60)
 //      imageView.backgroundColor = .red
       textField.leftView = imageView
+      textField.placeholder = "This is my placeholder"
+    
+      print("Printing \(textField.subviews.count) views")
+      
+      textField.subviews.forEach { v in
+         print("********")
+         print(v)
+      }
+      
+      print("********")
+      
    }
    
    override func didReceiveMemoryWarning() {
