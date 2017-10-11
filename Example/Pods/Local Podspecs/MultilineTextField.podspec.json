@@ -1,0 +1,22 @@
+{
+  "name": "MultilineTextField",
+  "version": "0.1.0",
+  "summary": "A short description of MultilineTextField.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/rlaguilar/MultilineTextField",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "rlaguilar": "rlac1990@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/rlaguilar/MultilineTextField.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MultilineTextField/Classes/**/*"
+}

@@ -7,18 +7,24 @@
 //
 
 import UIKit
+import MultilineTextField
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+   @IBOutlet weak var textField: MultilineTextField!
+   
+   override func viewDidLoad() {
+      super.viewDidLoad()
+      // Do any additional setup after loading the view, typically from a nib.
+      let imageView = UIImageView(image: #imageLiteral(resourceName: "fire-truck"))
+//      imageView.bounds = CGRect(x: 0, y: 0, width: 50, height: 60)
+//      imageView.backgroundColor = .red
+      textField.leftView = imageView
+   }
+   
+   override func didReceiveMemoryWarning() {
+      super.didReceiveMemoryWarning()
+      // Dispose of any resources that can be recreated.
+   }
+   
 }
 

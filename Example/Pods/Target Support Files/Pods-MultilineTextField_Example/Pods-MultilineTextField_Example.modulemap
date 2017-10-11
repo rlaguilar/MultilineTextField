@@ -1,0 +1,6 @@
+framework module Pods_MultilineTextField_Example {
+  umbrella header "Pods-MultilineTextField_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

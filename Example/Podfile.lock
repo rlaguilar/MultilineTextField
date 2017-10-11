@@ -1,0 +1,16 @@
+PODS:
+  - MultilineTextField (0.1.0)
+
+DEPENDENCIES:
+  - MultilineTextField (from `../`)
+
+EXTERNAL SOURCES:
+  MultilineTextField:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MultilineTextField: 812d5037177092a7631dfc50d887bf018bde923c
+
+PODFILE CHECKSUM: 4586e12ca3b1519c293869058ae6480d2e217967
+
+COCOAPODS: 1.2.1

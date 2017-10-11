@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C9AC9A4B79163E5193232FD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		0C9AC9A4B79163E5193232FD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		1A5C6B67770A03E97F87BD72 /* Pods_MultilineTextField_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultilineTextField_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E3C1AAB4FA8C8A0545E648B /* Pods_MultilineTextField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultilineTextField_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33433AF73DDFA01966AAD4D6 /* Pods-MultilineTextField_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultilineTextField_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MultilineTextField_Tests/Pods-MultilineTextField_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -43,8 +43,8 @@
 		607FACE51AFB9204008FA782 /* MultilineTextField_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultilineTextField_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		7DE1C24BD3D9F6E89E586FBB /* MultilineTextField.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MultilineTextField.podspec; path = ../MultilineTextField.podspec; sourceTree = "<group>"; };
-		7E8CB0B73994664BF30EB269 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		7DE1C24BD3D9F6E89E586FBB /* MultilineTextField.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MultilineTextField.podspec; path = ../MultilineTextField.podspec; sourceTree = "<group>"; };
+		7E8CB0B73994664BF30EB269 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		9D947208D0ED5620E38CE50F /* Pods-MultilineTextField_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultilineTextField_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MultilineTextField_Tests/Pods-MultilineTextField_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A93FD9CDD14020EAEAA9951A /* Pods-MultilineTextField_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultilineTextField_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MultilineTextField_Example/Pods-MultilineTextField_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -215,10 +215,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 5DA656H26H;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 5DA656H26H;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -508,6 +510,7 @@
 			baseConfigurationReference = 54B23DFBE163454D2009241F /* Pods-MultilineTextField_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5DA656H26H;
 				INFOPLIST_FILE = MultilineTextField/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -523,6 +526,7 @@
 			baseConfigurationReference = A93FD9CDD14020EAEAA9951A /* Pods-MultilineTextField_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5DA656H26H;
 				INFOPLIST_FILE = MultilineTextField/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -537,6 +541,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9D947208D0ED5620E38CE50F /* Pods-MultilineTextField_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 5DA656H26H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -558,6 +563,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 33433AF73DDFA01966AAD4D6 /* Pods-MultilineTextField_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 5DA656H26H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
