@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/MultilineTextField.svg?style=flat)](http://cocoapods.org/pods/MultilineTextField)
 [![Platform](https://img.shields.io/cocoapods/p/MultilineTextField.svg?style=flat)](http://cocoapods.org/pods/MultilineTextField)
 
+## THIS PROJECT IS UNDER CONSTRUCTION, STILL NOT READY FOR PRODUCTION
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
