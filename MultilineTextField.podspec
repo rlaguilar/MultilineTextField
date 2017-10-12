@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MultilineTextField'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'UITextField with multiple lines (or UITextView with placeholder)'
 
 # This description is used to generate tags and improve search results.
@@ -41,6 +41,6 @@ This can be seen as a `UITextField` with multiple lines, but under the hood it i
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
