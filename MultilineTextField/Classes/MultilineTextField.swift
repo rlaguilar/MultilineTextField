@@ -132,6 +132,7 @@ public class MultilineTextField: UITextView {
       placeholderView.text = ""
       placeholderView.isEditable = false
       placeholderView.textColor = UIColor(white: 0.7, alpha: 1)
+      placeholderView.backgroundColor = .clear
       
       
       // observe `UITextView` property changes to react accordinly
