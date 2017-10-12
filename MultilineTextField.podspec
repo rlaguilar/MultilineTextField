@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MultilineTextField'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'UITextField with multiple lines (or UITextView with placeholder)'
 
 # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ This can be seen as a `UITextField` with multiple lines, but under the hood it i
                        DESC
 
   s.homepage         = 'https://github.com/rlaguilar/MultilineTextField'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots     = 'https://raw.githubusercontent.com/rlaguilar/MultilineTextField/master/Example/img-multiple-lines.jpg', 'https://raw.githubusercontent.com/rlaguilar/MultilineTextField/master/Example/img-placeholder.jpg'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'rlaguilar' => 'rlac1990@gmail.com' }
   s.source           = { :git => 'https://github.com/rlaguilar/MultilineTextField.git', :tag => s.version.to_s }
