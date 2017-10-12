@@ -115,6 +115,14 @@ public class MultilineTextField: UITextView {
       initializeUI()
    }
    
+   deinit {
+      fieldObservations.forEach { $0.invalidate() }
+      
+      fieldObservations.removeAll()
+      
+      NotificationCenter.default.removeObserver(self)
+   }
+   
    func initializeUI() {
       self.insertSubview(placeholderView, at: 0)
       
@@ -125,7 +133,8 @@ public class MultilineTextField: UITextView {
       placeholderView.isEditable = false
       placeholderView.textColor = UIColor(white: 0.7, alpha: 1)
       
-      // clone `UITextView` properties (for use when changed from storyboard)
+      
+      // observe `UITextView` property changes to react accordinly
       
       NotificationCenter.default.addObserver(
          self,
@@ -150,14 +159,6 @@ public class MultilineTextField: UITextView {
          }
       )
 
-   }
-   
-   deinit {
-      fieldObservations.forEach { $0.invalidate() }
-      
-      fieldObservations.removeAll()
-      
-      NotificationCenter.default.removeObserver(self)
    }
    
    @objc private func textViewDidChange(notification: Notification) {
