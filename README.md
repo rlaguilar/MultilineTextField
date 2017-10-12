@@ -5,13 +5,45 @@
 [![License](https://img.shields.io/cocoapods/l/MultilineTextField.svg?style=flat)](http://cocoapods.org/pods/MultilineTextField)
 [![Platform](https://img.shields.io/cocoapods/p/MultilineTextField.svg?style=flat)](http://cocoapods.org/pods/MultilineTextField)
 
-## THIS PROJECT IS UNDER CONSTRUCTION, STILL NOT READY FOR PRODUCTION
+This  can be seen as a `UITextField` with multiple lines, but under the hood it is just a `UITextView` which aims to provide many of the functionalities currently available in the `UITextField` class. Currently the following functionalities are supported:
+
++ Multiple lines
++ Customizable left view
++ Customizable placeholder text
+
+## Usage
+
+### Via storyboards
+
+Add a `UITextView` and set its custom class to `MultilineTextField`. From the storyboard you can customize the placeholder text and also an image to be shown at the left of the field text.
+
+### Via code
+
+First of all you have to import the library  `import MultilineTextField`.
+
+After that just create an instance of the view an customize its properties:
+
+````
+let textField = MultiplelineTextField(frame: textFieldFrame)
+textField.leftView = UIImageView(image: image)
+// or use the convenience property:
+// textField.leftImage to assign an image directly
+
+// below are properties that can be optionally customized
+textField.placeholder = "This is my placeholder"
+textField.placeholderColor = UIColor.red
+textField.isPlaceholderScrollEnabled = true
+textField.leftViewOrigin = CGPoint(x: 8, y: 8)
+someView.addSubview(textField)
+````
 
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+It requires Swift 4 and Xcode 9 or above
 
 ## Installation
 
@@ -24,7 +56,7 @@ pod 'MultilineTextField'
 
 ## Author
 
-rlaguilar, rlac1990@gmail.com
+Reynaldo Aguilar, [rlaguilar](https://twitter.com/rlaguilar_)
 
 ## License
 

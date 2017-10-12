@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'MultilineTextField'
   s.version          = '0.1.0'
-  s.summary          = 'UITextField with multiple lines'
+  s.summary          = 'UITextField with multiple lines (or UITextView with placeholder)'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,10 +18,11 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Wraps a UITextView so that you can have the following functionalities:
+This can be seen as a `UITextField` with multiple lines, but under the hood it is just a `UITextView` which aims to provide many of the functionalities currently available in the `UITextField` class. Currently the following functionalities are supported:
+
 + Multiple lines
-+ Left and right views
-+ Placeholder
++ Customizable left view
++ Customizable placeholder text
                        DESC
 
   s.homepage         = 'https://github.com/rlaguilar/MultilineTextField'

@@ -14,28 +14,25 @@ class ViewController: UIViewController {
    
    override func viewDidLoad() {
       super.viewDidLoad()
-      // Do any additional setup after loading the view, typically from a nib.
-      let imageView = UIImageView(image: #imageLiteral(resourceName: "fire-truck"))
-//      imageView.bounds = CGRect(x: 0, y: 0, width: 50, height: 60)
-//      imageView.backgroundColor = .red
-      textField.leftView = imageView
+   
+      textField.leftView = UIImageView(image: #imageLiteral(resourceName: "fire-truck"))
+      // below are properties that can be optionally customized
       textField.placeholder = "This is my placeholder"
-    
-      print("Printing \(textField.subviews.count) views")
+      textField.placeholderColor = UIColor(white: 0.7, alpha: 1)
+      textField.isPlaceholderScrollEnabled = true
+      textField.leftViewOrigin = CGPoint(x: 8, y: 8)
       
-      textField.subviews.forEach { v in
-         print("********")
-         print(v)
+      textField.textContainerInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+      let tap = UITapGestureRecognizer(target: self, action: #selector(handleKeyboard(_:)))
+      self.view.addGestureRecognizer(tap)
+   }
+   
+   @objc func handleKeyboard(_ gesture: UITapGestureRecognizer) {
+      let location = gesture.location(in: textField)
+      
+      if !textField.bounds.contains(location) {
+         view.endEditing(true)
       }
-      
-      print("********")
-      
    }
-   
-   override func didReceiveMemoryWarning() {
-      super.didReceiveMemoryWarning()
-      // Dispose of any resources that can be recreated.
-   }
-   
 }
 
