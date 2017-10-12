@@ -22,7 +22,6 @@ class ViewController: UIViewController {
       textField.isPlaceholderScrollEnabled = true
       textField.leftViewOrigin = CGPoint(x: 8, y: 8)
       
-      textField.textContainerInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
       let tap = UITapGestureRecognizer(target: self, action: #selector(handleKeyboard(_:)))
       self.view.addGestureRecognizer(tap)
    }
