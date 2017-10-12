@@ -60,13 +60,13 @@ public class MultilineTextField: UITextView {
    }
    
    /// Point used as the origin for displaying the left view.
-   public var leftViewOrigin: CGPoint = CGPoint(x: 8, y: 8) {
+   public var leftViewOrigin: CGPoint = CGPoint(x: 0, y: 6) {
       didSet {
          invalidateLeftView()
       }
    }
    
-   private var leftExlusionPath: UIBezierPath?
+   private var leftExclusionPath: UIBezierPath?
    
    
    /// Convenience property to set an image directly instead of a left view
@@ -124,6 +124,8 @@ public class MultilineTextField: UITextView {
    }
    
    func initializeUI() {
+      self.textContainer.lineFragmentPadding = 0
+      
       self.insertSubview(placeholderView, at: 0)
       
       placeholderView.frame = self.bounds
@@ -160,6 +162,11 @@ public class MultilineTextField: UITextView {
          }
       )
 
+      fieldObservations.append(
+         self.textContainer.observe(\.lineFragmentPadding, options: [.initial, .new]) { [weak self] (textContainer, changes) in
+            self?.placeholderView.textContainer.lineFragmentPadding = textContainer.lineFragmentPadding
+         }
+      )
    }
    
    @objc private func textViewDidChange(notification: Notification) {
@@ -188,7 +195,7 @@ public class MultilineTextField: UITextView {
    }
    
    private func invalidateLeftView() {
-      if let path = self.leftExlusionPath {
+      if let path = self.leftExclusionPath {
          remove(exlusionPath: path)
       }
       
@@ -204,8 +211,11 @@ public class MultilineTextField: UITextView {
             ),
             size: size
          )
+         
          let exclusionPath = UIBezierPath(rect: exclusionRect)
          add(exclusionPath: exclusionPath)
+         
+         self.leftExclusionPath = exclusionPath
       }
    }
    
