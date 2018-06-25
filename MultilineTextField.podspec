@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MultilineTextField'
-  s.version          = '0.2.1'
+  s.version          = '0.2.3'
   s.summary          = 'UITextField with multiple lines (or UITextView with placeholder)'
 
 # This description is used to generate tags and improve search results.
