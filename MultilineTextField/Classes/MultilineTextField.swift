@@ -116,11 +116,14 @@ public class MultilineTextField: UITextView {
    }
    
    deinit {
-      fieldObservations.forEach { $0.invalidate() }
-      
-      fieldObservations.removeAll()
-      
-      NotificationCenter.default.removeObserver(self)
+      removeObservers()
+   }
+
+   public override func willMove(toSuperview newSuperview: UIView?) {
+      super.willMove(toSuperview: newSuperview)
+      if newSuperview == nil {
+         removeObservers()
+      }
    }
    
    func initializeUI() {
@@ -167,6 +170,12 @@ public class MultilineTextField: UITextView {
             self?.placeholderView.textContainer.lineFragmentPadding = textContainer.lineFragmentPadding
          }
       )
+   }
+
+   private func removeObservers() {
+      fieldObservations.forEach { $0.invalidate() }
+      fieldObservations.removeAll()
+      NotificationCenter.default.removeObserver(self)
    }
    
    @objc private func textViewDidChange(notification: Notification) {
