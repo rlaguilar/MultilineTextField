@@ -24,6 +24,7 @@ public class MultilineTextField: UITextView {
    
    public override var text: String! {
       didSet {
+        self.textAli
          self.textViewDidChange(self)
       }
    }
@@ -50,6 +51,13 @@ public class MultilineTextField: UITextView {
          placeholderView.textColor = placeholderColor
       }
    }
+
+   /// Alignment for placeholder
+    public var placeholderAlignment: NSTextAlignment = .left {
+        didSet {
+            placeholderView.textAlignment = placeholderAlignment
+        }
+    }
    
    /// A Boolean value that determines whether scrolling is enabled
    /// for the placeholder content.
