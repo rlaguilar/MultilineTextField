@@ -144,7 +144,7 @@ public class MultilineTextField: UITextView {
       placeholderView.text = ""
       placeholderView.isEditable = false
       placeholderView.textColor = UIColor(white: 0.7, alpha: 1)
-      placeholderView.backgroundColor = .red
+      placeholderView.backgroundColor = .clear
       
       
       // observe `UITextView` property changes to react accordinly
@@ -198,7 +198,7 @@ public class MultilineTextField: UITextView {
          || !textView.attributedText.string.isEmpty
    
       // handling scrolling of placeholder view
-//      placeholderView.setContentOffset(.zero, animated: false)
+      placeholderView.setContentOffset(.zero, animated: false)
 
       if let left = leftView {
          if placeholderView.isHidden {
