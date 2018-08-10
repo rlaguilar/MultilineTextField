@@ -24,7 +24,6 @@ public class MultilineTextField: UITextView {
    
    public override var text: String! {
       didSet {
-        self.textAli
          self.textViewDidChange(self)
       }
    }
