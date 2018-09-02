@@ -148,13 +148,21 @@ public class MultilineTextField: UITextView {
       
       
       // observe `UITextView` property changes to react accordinly
-      
-      NotificationCenter.default.addObserver(
-         self,
-         selector: #selector(textViewDidChange(notification:)),
-         name: UITextView.textDidChangeNotification,
-         object: self
-      )
+      #if swift(>=4.2)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(textViewDidChange(notification:)),
+            name: UITextView.textDidChangeNotification,
+            object: self
+        )
+      #else
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(textViewDidChange(notification:)),
+            name: Notification.Name.UITextViewTextDidChange,
+            object: self
+        )
+      #endif
       
       fieldObservations.append(
          self.observe(\.font, options: [.initial, .new]) { [weak self] (textField, change) in
