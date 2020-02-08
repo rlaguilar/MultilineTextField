@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MultilineTextField'
-  s.version          = '0.2.3'
+  s.version          = '1.0.0'
   s.summary          = 'UITextField with multiple lines (or UITextView with placeholder)'
 
 # This description is used to generate tags and improve search results.
@@ -34,7 +34,7 @@ This can be seen as a `UITextField` with multiple lines, but under the hood it i
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'MultilineTextField/Classes/**/*'
+  s.source_files = 'Sources/**/*'
   
   # s.resource_bundles = {
   #   'MultilineTextField' => ['MultilineTextField/Assets/*.png']
