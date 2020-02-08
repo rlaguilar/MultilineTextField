@@ -40,6 +40,7 @@ This can be seen as a `UITextField` with multiple lines, but under the hood it i
   #   'MultilineTextField' => ['MultilineTextField/Assets/*.png']
   # }
 
+  s.swift_versions = ['4.0', '5.0']
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
