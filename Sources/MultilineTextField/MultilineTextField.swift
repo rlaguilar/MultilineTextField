@@ -249,6 +249,15 @@ public class MultilineTextField: UITextView {
     }
     
     private func remove(exlusionPath: UIBezierPath) {
+        #if swift(>=5)
+        if let index = self.textContainer.exclusionPaths.firstIndex(of: exlusionPath) {
+            self.textContainer.exclusionPaths.remove(at: index)
+        }
+        
+        if let index = placeholderView.textContainer.exclusionPaths.firstIndex(of: exlusionPath) {
+            placeholderView.textContainer.exclusionPaths.remove(at: index)
+        }
+        #else
         if let index = self.textContainer.exclusionPaths.index(of: exlusionPath) {
             self.textContainer.exclusionPaths.remove(at: index)
         }
@@ -256,5 +265,6 @@ public class MultilineTextField: UITextView {
         if let index = placeholderView.textContainer.exclusionPaths.index(of: exlusionPath) {
             placeholderView.textContainer.exclusionPaths.remove(at: index)
         }
+        #endif
     }
 }
