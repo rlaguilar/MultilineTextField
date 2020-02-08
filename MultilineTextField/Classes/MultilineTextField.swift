@@ -50,6 +50,13 @@ public class MultilineTextField: UITextView {
          placeholderView.textColor = placeholderColor
       }
    }
+
+   /// Alignment for placeholder
+    public var placeholderAlignment: NSTextAlignment = .left {
+        didSet {
+            placeholderView.textAlignment = placeholderAlignment
+        }
+    }
    
    /// A Boolean value that determines whether scrolling is enabled
    /// for the placeholder content.
@@ -141,13 +148,21 @@ public class MultilineTextField: UITextView {
       
       
       // observe `UITextView` property changes to react accordinly
-      
-      NotificationCenter.default.addObserver(
-         self,
-         selector: #selector(textViewDidChange(notification:)),
-         name: Notification.Name.UITextViewTextDidChange,
-         object: self
-      )
+      #if swift(>=4.2)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(textViewDidChange(notification:)),
+            name: UITextView.textDidChangeNotification,
+            object: self
+        )
+      #else
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(textViewDidChange(notification:)),
+            name: Notification.Name.UITextViewTextDidChange,
+            object: self
+        )
+      #endif
       
       fieldObservations.append(
          self.observe(\.font, options: [.initial, .new]) { [weak self] (textField, change) in
@@ -192,7 +207,7 @@ public class MultilineTextField: UITextView {
    
       // handling scrolling of placeholder view
       placeholderView.setContentOffset(.zero, animated: false)
-      
+
       if let left = leftView {
          if placeholderView.isHidden {
             self.addSubview(left)
