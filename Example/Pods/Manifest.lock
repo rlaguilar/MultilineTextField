@@ -1,5 +1,5 @@
 PODS:
-  - MultilineTextField (0.1.0)
+  - MultilineTextField (1.0.0)
 
 DEPENDENCIES:
   - MultilineTextField (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MultilineTextField: 812d5037177092a7631dfc50d887bf018bde923c
+  MultilineTextField: 32a67d0f79fe2c0ece1b99bd0f56b62381e776ba
 
 PODFILE CHECKSUM: 4586e12ca3b1519c293869058ae6480d2e217967
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.8.4
