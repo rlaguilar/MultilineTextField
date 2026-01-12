@@ -28,7 +28,6 @@ This can be seen as a `UITextField` with multiple lines, but under the hood it i
   s.homepage         = 'https://github.com/rlaguilar/MultilineTextField'
   s.screenshots     = 'https://raw.githubusercontent.com/rlaguilar/MultilineTextField/master/Example/img-multiple-lines.jpg', 'https://raw.githubusercontent.com/rlaguilar/MultilineTextField/master/Example/img-placeholder.jpg'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'rlaguilar' => 'rlac1990@gmail.com' }
   s.source           = { :git => 'https://github.com/rlaguilar/MultilineTextField.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/rlaguilar_'
 
